@@ -16,7 +16,8 @@ if st.button("Run Optimization"):
 
     # --- Fetch price data ---
     st.subheader("🔍 Fetching Data")
-    prices = yf.download(tickers, start=start, end=end)["Adj Close"]
+    data = yf.download(tickers, start=start, end=end, auto_adjust=False) # Explicitly set auto_adjust to False
+    prices = data['Adj Close']
     st.write(prices.tail())
 
     # --- Compute returns and risk model ---
