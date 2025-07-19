@@ -1,7 +1,7 @@
 import streamlit as st
 import yfinance as yf
 import pandas as pd
-from pypfopt import EfficientFrontier, risk_models, expected_returns
+from PyPortfolioOpt import EfficientFrontier, risk_models, expected_returns
 
 st.set_page_config(page_title="Portfolio Optimizer", layout="wide")
 
